@@ -26,8 +26,7 @@ $hbase shell
 scan '/user/user01/sensor',  {COLUMNS=>['data']}
 scan '/user/user01/sensor',  {COLUMNS=>['alert']}
 
-Step 6: launch one of the programs below to read data and calculate daily statistics
-calculate stats for one column
+Step 6: launch one of the programs below to read data and calculatecalculate stats for one column
 /opt/mapr/spark/spark-1.3.1/bin/spark-submit --driver-class-path `hbase classpath` --class examples.HBaseReadWrite sparkstreamhbaseapp-1.0.jar
 calculate stats for whole row
 /opt/mapr/spark/spark-1.3.1/bin/spark-submit --driver-class-path `hbase classpath` --class examples.HBaseReadRowWriteStats sparkstreamhbaseapp-1.0.jar
