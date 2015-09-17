@@ -23,8 +23,8 @@ cp sensordata.csv  /user/user01/stream/.
 Step 5: you can scan the data written to the table, however the values in binary double are not readable from the shell
 launch the hbase shell,  scan the data column family and the alert column family 
 $hbase shell
-scan '/user/user01/sensor',  {COLUMNS=>['data']}
-scan '/user/user01/sensor',  {COLUMNS=>['alert']}
+scan '/user/user01/sensor',  {COLUMNS=>['data'],  LIMIT => 10}
+scan '/user/user01/sensor',  {COLUMNS=>['alert'],  LIMIT => 10 }
 
 Step 6: launch one of the programs below to read data and calculatecalculate stats for one column
 /opt/mapr/spark/spark-1.3.1/bin/spark-submit --driver-class-path `hbase classpath` --class examples.HBaseReadWrite sparkstreamhbaseapp-1.0.jar
