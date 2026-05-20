@@ -1,3 +1,5 @@
+This demo has been archived and is no longer maintained at any level due to security issues with old 
+versions of Spark.
 
 Create an hbase table to write to:
 launch the hbase shell
